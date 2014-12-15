@@ -39,10 +39,11 @@ Run in "development" mode (with autoreloading):
 docker run -p 5000:5000 --env DEBUG=1 -v ${PWD}:/opt/python-flask --entrypoint=python tgwizard/python-flask server.py
 ```
 
-curl:
+Access site:
 
 ```bash
 curl `boot2docker ip 2> /dev/null`:5000
+open `boot2docker ip 2> /dev/null`:5000
 ```
 
 Enter docker instance with bash:
