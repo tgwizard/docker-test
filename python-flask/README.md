@@ -43,7 +43,7 @@ Access site:
 
 ```bash
 curl `boot2docker ip 2> /dev/null`:5000
-open `boot2docker ip 2> /dev/null`:5000
+open http://`boot2docker ip 2> /dev/null`:5000
 ```
 
 Enter docker instance with bash:
