@@ -1,26 +1,5 @@
 # Docker and python flask
 
-## Docker
-
-Install Docker: https://docs.docker.com/installation/
-
-For Mac OS X, also setup the current shell:
-
-```bash
-boot2docker shellinit
-# Execute the echoed export commands
-```
-
-And find the IP of the Docker container:
-
-```bash
-boot2docker ip
-```
-
-
-## Using Docker
-
-
 Build the image:
 
 ```bash
@@ -53,7 +32,7 @@ Enter docker instance with bash:
 # -t allocate a TTY
 # -v to mount the current directory to /opt/python-flask in the container
 # --entrypoint to override what is in the Dockerfile
-docker run -i -t -v ${PWD}:/opt/python-flask --entrypoint=/bin/bash tgwizard/python-flask
+docker run -i -t -v ${PWD}:/opt/python-flask --entrypoint=bash tgwizard/python-flask
 ```
 
 Update requirements:
@@ -62,4 +41,10 @@ Update requirements:
 # 1. Enter with bash
 pip install <package>
 pip freeze > requirements.txt
+```
+
+Run spam client:
+
+```bash
+docker run -i -t -v ${PWD}:/opt/python-flask --entrypoint=python tgwizard/python-flask spam-client.py http://`boot2docker ip 2> /dev/null`:5000
 ```
