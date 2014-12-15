@@ -8,7 +8,7 @@ For Mac OS X, also setup the current shell:
 
 ```bash
 boot2docker shellinit
-# Execut the echoed export commands
+# Execute the echoed export commands
 ```
 
 And find the IP of the Docker container:
