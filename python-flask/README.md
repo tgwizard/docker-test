@@ -36,7 +36,7 @@ docker run -p 5000:5000 tgwizard/python-flask
 Run in "development" mode (with autoreloading):
 
 ```bash
-docker run -p 5000:5000 --env DEBUG=1 -v ${PWD}:/opt/python-flask tgwizard/python-flask
+docker run -p 5000:5000 --env DEBUG=1 -v ${PWD}:/opt/python-flask --entrypoint=python tgwizard/python-flask server.py
 ```
 
 curl:

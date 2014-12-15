@@ -5,6 +5,7 @@ Werkzeug==0.9.6
 argparse==1.2.1
 chardet==2.0.1
 colorama==0.2.5
+gunicorn==19.1.1
 html5lib==0.999
 itsdangerous==0.24
 requests==2.2.1
